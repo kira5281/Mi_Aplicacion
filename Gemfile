@@ -29,6 +29,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 # Devise. Authentication solution for rails
 gem 'devise', '~> 4.2'
 
+gem "chartkick"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
