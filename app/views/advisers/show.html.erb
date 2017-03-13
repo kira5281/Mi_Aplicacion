@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @adviser.name %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @adviser.area %>
+</p>
+
+<p>
+  <strong>Sede:</strong>
+  <%= @adviser.sede %>
+</p>
+
+<% if @adviser.user == current_user %>
+	<%= link_to 'Edit', edit_adviser_path(@adviser) %> |
+<% end %>
+<%= link_to 'Back', advisers_path %>

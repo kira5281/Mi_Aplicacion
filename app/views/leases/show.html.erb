@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Adviser:</strong>
+  <%= @lease.adviser_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lease.name %>
+</p>
+
+<p>
+  <strong>Cant:</strong>
+  <%= @lease.cant %>
+</p>
+
+<% if @lease.user == current_user %>
+	<%= link_to 'Edit', edit_lease_path(@lease) %> |
+<% end %>
+<%= link_to 'Back', leases_path %>

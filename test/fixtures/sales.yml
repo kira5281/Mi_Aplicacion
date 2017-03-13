@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  adviser_id: 1
+  name: MyString
+  cant: 1.5
+
+two:
+  adviser_id: 1
+  name: MyString
+  cant: 1.5

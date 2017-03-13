@@ -1,0 +1,33 @@
+<%= form_for(adviser) do |f| %>
+  <% if adviser.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(adviser.errors.count, "error") %> prohibited this adviser from being saved:</h2>
+
+      <ul>
+      <% adviser.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= f.label :Nombre_completo %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :Area %>
+    <%= f.select(:area, ['ventas', 'Arrendamientos'], class: 'form-control') %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :Sede %>
+    <%= f.select(:sede, ['Poblado', 'Sabaneta'], class: 'form-control') %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "enviar", class: 'btn btn-primary' %>
+  </div>
+<% end %>
+

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Asesores</h1>
+
+<div class="table-responsive">
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Area</th>
+        <th>Sede</th>
+        <th colspan="3">Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @advisers.each do |adviser| %>
+        <tr>
+          <td><%= adviser.name %></td>
+          <td><%= adviser.area %></td>
+          <td><%= adviser.sede %></td>
+          <td><%= adviser.user.name if adviser.user %></td>
+          <td><%= link_to 'Ver', adviser, class: 'btn btn-info btn-xs' %></td>
+          <% if pin.user == current_user %>
+            <td><%= link_to 'Editar', edit_adviser_path(adviser), class: 'btn btn-warning btn-xs' %></td>
+            <td><%= link_to 'Eliminar', adviser, class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<br>
+<% if user_signed_in? %>
+  <%= link_to 'Nuevo Asesor', new_adviser_path, class: 'btn btn-primary' %>
+<% end %>
