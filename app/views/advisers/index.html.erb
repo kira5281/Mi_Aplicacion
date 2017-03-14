@@ -21,7 +21,7 @@
           <td><%= adviser.sede %></td>
           <td><%= adviser.user.name if adviser.user %></td>
           <td><%= link_to 'Ver', adviser, class: 'btn btn-info btn-xs' %></td>
-          <% if pin.user == current_user %>
+          <% if adviser.user == current_user %>
             <td><%= link_to 'Editar', edit_adviser_path(adviser), class: 'btn btn-warning btn-xs' %></td>
             <td><%= link_to 'Eliminar', adviser, class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Estas seguro?' } %></td>
           <% end %>

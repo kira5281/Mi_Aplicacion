@@ -18,12 +18,12 @@
 
   <div class="field form-group">
     <%= f.label :Area %>
-    <%= f.select(:area, ['ventas', 'Arrendamientos'], class: 'form-control') %>
+    <%= f.select(:area, ['ventas', 'Arrendamientos'], {include_blank: "Selecciona un area..."}, { :class => 'form-control' }) %>
   </div>
 
   <div class="field form-group">
     <%= f.label :Sede %>
-    <%= f.select(:sede, ['Poblado', 'Sabaneta'], class: 'form-control') %>
+    <%= f.select(:sede, ['Poblado', 'Sabaneta'], {include_blank: "Selecciona la sede..."}, { :class => 'form-control' }) %>
   </div>
 
   <div class="actions">

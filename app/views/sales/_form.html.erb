@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :adviser_id %>
-    <%= f.number_field :adviser_id %>
+    <%= f.select :adviser_id, Adviser.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
   </div>
 
   <div class="field">
