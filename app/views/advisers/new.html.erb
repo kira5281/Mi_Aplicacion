@@ -1,5 +1,13 @@
-<h1>New Adviser</h1>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h1>nuevo Asesor</h1>
+	</div>
+	
+	<div class="panel-body">
+		<%= render 'form', adviser: @adviser %>
+	</div>
+	<div class="panel-footer">
+		<%= link_to 'Back', advisers_path %>
+	</div>
+</div>
 
-<%= render 'form', adviser: @adviser %>
-
-<%= link_to 'Back', advisers_path %>

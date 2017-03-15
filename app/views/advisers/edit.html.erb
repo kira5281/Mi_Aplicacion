@@ -1,6 +1,14 @@
-<h1>Editing Adviser</h1>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h1>Editar Asesor</h1>
+	</div>
 
-<%= render 'form', adviser: @adviser %>
+	<div class="panel-body">
+		<%= render 'form', adviser: @adviser %>
+	</div>
 
-<%= link_to 'Show', @adviser %> |
-<%= link_to 'Back', advisers_path %>
+	<div class="panel-footer">
+		<%= link_to 'Mostrar', @adviser %> |
+		<%= link_to 'Regrasar', advisers_path %>
+	</div>
+</div>

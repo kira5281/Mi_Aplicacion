@@ -1,5 +1,13 @@
-<h1>New Sale</h1>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h1>Nueva Venta</h1>
+	</div>
+	
+	<div class="panel-body">
+		<%= render 'form', sale: @sale %>
+	</div>
+	<div class="panel-footer">
+		<%= link_to 'Volver', sales_path %>
+	</div>
+</div>
 
-<%= render 'form', sale: @sale %>
-
-<%= link_to 'Back', sales_path %>

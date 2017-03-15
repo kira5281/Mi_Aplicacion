@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :adviser_id %>
-    <%= f.select :adviser_id, Adviser.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
+  <div class="field form-group">
+    <%= f.label :Asesor %>
+    <%= f.select :adviser_id, Adviser.all.collect { |p| [ p.name, p.id ] }, {include_blank: "Seleccionar asesor..."}, { :class => 'form-control' } %>
   </div>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="field form-group">
+    <%= f.label :Nombre_venta %>
+    <%= f.text_field :name, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :cant %>
-    <%= f.text_field :cant %>
+  <div class="field form-group">
+    <%= f.label :Precio_venta %>
+    <%= f.text_field :cant, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "enviar", class: 'btn btn-primary' %>
   </div>
 <% end %>

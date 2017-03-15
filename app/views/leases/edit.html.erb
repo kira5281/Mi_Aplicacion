@@ -1,6 +1,14 @@
-<h1>Editing Lease</h1>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h1>Editar Arrendamiento</h1>
+	</div>
 
-<%= render 'form', lease: @lease %>
+	<div class="panel-body">
+		<%= render 'form', lease: @lease %>
+	</div>
 
-<%= link_to 'Show', @lease %> |
-<%= link_to 'Back', leases_path %>
+	<div class="panel-footer">
+		<%= link_to 'Mostrar', @lease %> |
+		<%= link_to 'Volver', leases_path %>
+	</div>
+</div>

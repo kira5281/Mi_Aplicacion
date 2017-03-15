@@ -1,5 +1,13 @@
-<h1>New Lease</h1>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h1>Nuevo arrendamiento</h1>
+	</div>
+	
+	<div class="panel-body">
+		<%= render 'form', lease: @lease %>
+	</div>
+	<div class="panel-footer">
+		<%= link_to 'Volver', leases_path %>
+	</div>
+</div>
 
-<%= render 'form', lease: @lease %>
-
-<%= link_to 'Back', leases_path %>
